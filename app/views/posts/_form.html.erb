@@ -1,0 +1,42 @@
+<!-- <%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+  </div>
+
+  <div class="field">
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="actions">
+  </div>
+<% end %> -->
+<%= form_with(model: post, local: true) do |form| %>
+  <div class="row">
+    <div class="three columns">
+      <%= form.label :title %>
+      <%= form.text_field :title, class: 'u-full-width' %>
+    </div>
+    <div class="three columns">
+      <%= form.label :image %>
+      <%= form.file_field :image, class: 'u-full-width' %>
+    </div>
+    <div class="three columns">
+      <%= form.submit :submit, class: 'button-primary' %>
+    </div>
+  </div>
+<% end %>

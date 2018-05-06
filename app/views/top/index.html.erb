@@ -1,10 +1,45 @@
-<main class="main">
-  <div class="hero__container">
-    <%= form_tag create_bucket_path, method: :post do |form|%>
-      <%= label_tag 'name' %>
-      <%= text_field_tag 'name' %>
-      <%= file_field_tag 'file' %>
-      <%= submit_tag 'create' %>
-    <% end %>
+<div class="container">
+  <section class="header">
+      <h2 class="title">A dead simple, responsive boilerplate.</h2>
+      <a class="button button-primary" href="https://github.com/dhg/Skeleton/releases/download/2.0.4/Skeleton-2.0.4.zip" onclick="_gaq.push(['_trackEvent', 'skeleton', 'download'])">Download</a>
+    </section>
+</div>
+<div class="key-points">
+  <div class="value-props row">
+    <div class="three columns value-prop">
+      <%= image_tag 'icons8-box-480', class: "u-max-full-width" %>
+      Active Storage
+    </div>
+    <div class="three columns value-prop">
+      <%= image_tag 'icons8-redis-480', class: "u-max-full-width" %>
+      Redis Cache Store
+    </div>
+    <div class="three columns value-prop">
+      <%= image_tag 'icons8-padlock-480', class: "u-max-full-width" %>
+      Credentials
+    </div>
+    <div class="three columns value-prop">
+      <%= image_tag 'icons8-services-480', class: "u-max-full-width" %>
+      Content Security Policy
+    </div>
   </div>
-</main>
+</div>
+
+<div class="docs-section" id="intro">
+  <h6 class="docs-header">Credentials</h6>
+  <p>Rails has removed secrets.yml in 5.2 version. It has been replaced by using the combination of <code>master.key</code> and <code>credentials.yml.enc</code></p>
+  <p>To edit/show credentials simply type: </p>
+  <p><a> <code> rails credentials:edit </code> </a></p>
+  <p><a> <code> rails credentials:show </code> </a></p>
+  <p><code>master.key</code> is the only file needed to be in <code>.gitignore</code></p>
+</div>
+
+<div class="docs-section" id="intro">
+  <h6 class="docs-header">Active Storage</h6>
+  <p>Active Storage is the new way to handle file uploads in Rails</p>
+  <p>To enable Active Storage in application: </p>
+  <p><a> <code> rails active_storage:install </code> </a></p>
+  <p> This will add a new migration to your <code>db/migrate</code> folder </p>
+  <p><a> <code> has_one_attached :image </code> </a></p>
+  <p><code>master.key</code> is the only file needed to be in <code>.gitignore</code></p>
+</div>
