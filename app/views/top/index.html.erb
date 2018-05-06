@@ -1,0 +1,10 @@
+<main class="main">
+  <div class="hero__container">
+    <%= form_tag create_bucket_path, method: :post do |form|%>
+      <%= label_tag 'name' %>
+      <%= text_field_tag 'name' %>
+      <%= file_field_tag 'file' %>
+      <%= submit_tag 'create' %>
+    <% end %>
+  </div>
+</main>
